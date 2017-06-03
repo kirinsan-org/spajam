@@ -8,6 +8,7 @@
 
 import UIKit
 import NotAutoLayout
+import Eltaso
 
 final class FairySearchViewController: UIViewController {
 	
@@ -15,5 +16,19 @@ final class FairySearchViewController: UIViewController {
 		let view = FairySearchView()
 		return view
 	}()
+	
+	override func loadView() {
+		let view = self.fairySearchView
+		view.frame = UIScreen.main.bounds
+		view.autoresizingMask = .flexibleSize
+	}
+	
+}
+
+extension FairySearchViewController {
+	
+	func update() {
+		self.fairySearchView.updateFairies()
+	}
 	
 }

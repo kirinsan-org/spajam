@@ -19,6 +19,7 @@
 		79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E71EE2B753004A950F /* NotAutoLayout.framework */; };
 		79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819ED1EE2B997004A950F /* FairySearchViewController.swift */; };
 		79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819EF1EE2BA16004A950F /* FairySearchView.swift */; };
+		79B819F21EE2BBB6004A950F /* FairyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819F11EE2BBB6004A950F /* FairyIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		79B819E71EE2B753004A950F /* NotAutoLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotAutoLayout.framework; path = ../Carthage/Build/iOS/NotAutoLayout.framework; sourceTree = "<group>"; };
 		79B819ED1EE2B997004A950F /* FairySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchViewController.swift; sourceTree = "<group>"; };
 		79B819EF1EE2BA16004A950F /* FairySearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchView.swift; sourceTree = "<group>"; };
+		79B819F11EE2BBB6004A950F /* FairyIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				79B819EF1EE2BA16004A950F /* FairySearchView.swift */,
+				79B819F11EE2BBB6004A950F /* FairyIcon.swift */,
 			);
 			name = Views;
 			path = Source/Views;
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B819F21EE2BBB6004A950F /* FairyIcon.swift in Sources */,
 				79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */,
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
 				79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */,
