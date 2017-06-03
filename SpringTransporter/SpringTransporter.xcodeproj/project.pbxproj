@@ -18,6 +18,14 @@
 		79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E71EE2B753004A950F /* NotAutoLayout.framework */; };
 		79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819ED1EE2B997004A950F /* FairySearchViewController.swift */; };
 		79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819EF1EE2BA16004A950F /* FairySearchView.swift */; };
+		BF13CC031EE3761A006C1BBA /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CBFD1EE3761A006C1BBA /* FirebaseAnalytics.framework */; };
+		BF13CC041EE3761A006C1BBA /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CBFE1EE3761A006C1BBA /* FirebaseCore.framework */; };
+		BF13CC051EE3761A006C1BBA /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CBFF1EE3761A006C1BBA /* FirebaseInstanceID.framework */; };
+		BF13CC061EE3761A006C1BBA /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC001EE3761A006C1BBA /* GoogleInterchangeUtilities.framework */; };
+		BF13CC071EE3761A006C1BBA /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC011EE3761A006C1BBA /* GoogleSymbolUtilities.framework */; };
+		BF13CC081EE3761A006C1BBA /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC021EE3761A006C1BBA /* GoogleToolboxForMac.framework */; };
+		BF13CC0A1EE376E6006C1BBA /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC091EE376E6006C1BBA /* FirebaseDatabase.framework */; };
+		BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,17 @@
 		79B819E71EE2B753004A950F /* NotAutoLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotAutoLayout.framework; path = ../Carthage/Build/iOS/NotAutoLayout.framework; sourceTree = "<group>"; };
 		79B819ED1EE2B997004A950F /* FairySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchViewController.swift; sourceTree = "<group>"; };
 		79B819EF1EE2BA16004A950F /* FairySearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchView.swift; sourceTree = "<group>"; };
+		BF13CBFD1EE3761A006C1BBA /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = ../Firebase/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BF13CBFE1EE3761A006C1BBA /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = ../Firebase/FirebaseCore.framework; sourceTree = "<group>"; };
+		BF13CBFF1EE3761A006C1BBA /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = ../Firebase/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BF13CC001EE3761A006C1BBA /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = ../Firebase/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		BF13CC011EE3761A006C1BBA /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = ../Firebase/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		BF13CC021EE3761A006C1BBA /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = ../Firebase/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		BF13CC091EE376E6006C1BBA /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = ../Firebase/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BF13CC0B1EE37845006C1BBA /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF13CC141EE37C2E006C1BBA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		BF13CC151EE37D89006C1BBA /* SpringTransporter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpringTransporter-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +81,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF13CC0A1EE376E6006C1BBA /* FirebaseDatabase.framework in Frameworks */,
+				BF13CC041EE3761A006C1BBA /* FirebaseCore.framework in Frameworks */,
 				79B819E81EE2B753004A950F /* Eltaso.framework in Frameworks */,
+				BF13CC051EE3761A006C1BBA /* FirebaseInstanceID.framework in Frameworks */,
+				BF13CC071EE3761A006C1BBA /* GoogleSymbolUtilities.framework in Frameworks */,
+				BF13CC061EE3761A006C1BBA /* GoogleInterchangeUtilities.framework in Frameworks */,
+				BF13CC081EE3761A006C1BBA /* GoogleToolboxForMac.framework in Frameworks */,
 				79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */,
+				BF13CC031EE3761A006C1BBA /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +143,8 @@
 				79B819BE1EE2B5AD004A950F /* Assets.xcassets */,
 				79B819C01EE2B5AD004A950F /* LaunchScreen.storyboard */,
 				79B819C31EE2B5AD004A950F /* Info.plist */,
+				BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */,
+				BF13CC151EE37D89006C1BBA /* SpringTransporter-Bridging-Header.h */,
 			);
 			path = SpringTransporter;
 			sourceTree = "<group>";
@@ -142,6 +170,7 @@
 		79B819E51EE2B753004A950F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF13CC0D1EE378A7006C1BBA /* Firebase */,
 				79B819E61EE2B753004A950F /* Eltaso.framework */,
 				79B819E71EE2B753004A950F /* NotAutoLayout.framework */,
 			);
@@ -174,6 +203,23 @@
 			path = Source/Views;
 			sourceTree = "<group>";
 		};
+		BF13CC0D1EE378A7006C1BBA /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				BF13CC0B1EE37845006C1BBA /* Firebase.h */,
+				BF13CC141EE37C2E006C1BBA /* module.modulemap */,
+				BF13CC091EE376E6006C1BBA /* FirebaseDatabase.framework */,
+				BF13CBFD1EE3761A006C1BBA /* FirebaseAnalytics.framework */,
+				BF13CBFE1EE3761A006C1BBA /* FirebaseCore.framework */,
+				BF13CBFF1EE3761A006C1BBA /* FirebaseInstanceID.framework */,
+				BF13CC001EE3761A006C1BBA /* GoogleInterchangeUtilities.framework */,
+				BF13CC011EE3761A006C1BBA /* GoogleSymbolUtilities.framework */,
+				BF13CC021EE3761A006C1BBA /* GoogleToolboxForMac.framework */,
+			);
+			name = Firebase;
+			path = ../Firebase;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,6 +230,7 @@
 				79B819B01EE2B5AC004A950F /* Sources */,
 				79B819B11EE2B5AC004A950F /* Frameworks */,
 				79B819B21EE2B5AC004A950F /* Resources */,
+				BF13CC181EE37E7D006C1BBA /* [carthage] Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +290,7 @@
 					79B819B31EE2B5AC004A950F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KC8N9BMQJY;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					79B819C71EE2B5AD004A950F = {
@@ -285,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B819C21EE2B5AD004A950F /* LaunchScreen.storyboard in Resources */,
+				BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */,
 				79B819BF1EE2B5AD004A950F /* Assets.xcassets in Resources */,
 				79B819BD1EE2B5AD004A950F /* Main.storyboard in Resources */,
 			);
@@ -305,6 +354,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF13CC181EE37E7D006C1BBA /* [carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Eltaso.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/NotAutoLayout.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Danbo.framework",
+			);
+			name = "[carthage] Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79B819B01EE2B5AC004A950F /* Sources */ = {
@@ -464,13 +533,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KC8N9BMQJY;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Firebase",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpringTransporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.SpringTransporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpringTransporter/SpringTransporter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Firebase";
 			};
 			name = Debug;
 		};
@@ -478,13 +555,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KC8N9BMQJY;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Firebase",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpringTransporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.SpringTransporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpringTransporter/SpringTransporter-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Firebase";
 			};
 			name = Release;
 		};
