@@ -16,6 +16,8 @@
 		79B819D81EE2B5AD004A950F /* SpringTransporterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819D71EE2B5AD004A950F /* SpringTransporterUITests.swift */; };
 		79B819E81EE2B753004A950F /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E61EE2B753004A950F /* Eltaso.framework */; };
 		79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E71EE2B753004A950F /* NotAutoLayout.framework */; };
+		79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819ED1EE2B997004A950F /* FairySearchViewController.swift */; };
+		79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819EF1EE2BA16004A950F /* FairySearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		79B819D91EE2B5AD004A950F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79B819E61EE2B753004A950F /* Eltaso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eltaso.framework; path = ../Carthage/Build/iOS/Eltaso.framework; sourceTree = "<group>"; };
 		79B819E71EE2B753004A950F /* NotAutoLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotAutoLayout.framework; path = ../Carthage/Build/iOS/NotAutoLayout.framework; sourceTree = "<group>"; };
+		79B819ED1EE2B997004A950F /* FairySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchViewController.swift; sourceTree = "<group>"; };
+		79B819EF1EE2BA16004A950F /* FairySearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		79B819EA1EE2B841004A950F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				79B819ED1EE2B997004A950F /* FairySearchViewController.swift */,
 			);
 			name = Controllers;
 			path = Source/Controllers;
@@ -163,6 +168,7 @@
 		79B819EC1EE2B841004A950F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79B819EF1EE2BA16004A950F /* FairySearchView.swift */,
 			);
 			name = Views;
 			path = Source/Views;
@@ -305,8 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */,
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
 				79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */,
+				79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
