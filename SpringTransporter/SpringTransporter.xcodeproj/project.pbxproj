@@ -14,6 +14,8 @@
 		79B819C21EE2B5AD004A950F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B819C01EE2B5AD004A950F /* LaunchScreen.storyboard */; };
 		79B819CD1EE2B5AD004A950F /* SpringTransporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819CC1EE2B5AD004A950F /* SpringTransporterTests.swift */; };
 		79B819D81EE2B5AD004A950F /* SpringTransporterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819D71EE2B5AD004A950F /* SpringTransporterUITests.swift */; };
+		79B819E81EE2B753004A950F /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E61EE2B753004A950F /* Eltaso.framework */; };
+		79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B819E71EE2B753004A950F /* NotAutoLayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		79B819D31EE2B5AD004A950F /* SpringTransporterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringTransporterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B819D71EE2B5AD004A950F /* SpringTransporterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringTransporterUITests.swift; sourceTree = "<group>"; };
 		79B819D91EE2B5AD004A950F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79B819E61EE2B753004A950F /* Eltaso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eltaso.framework; path = ../Carthage/Build/iOS/Eltaso.framework; sourceTree = "<group>"; };
+		79B819E71EE2B753004A950F /* NotAutoLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotAutoLayout.framework; path = ../Carthage/Build/iOS/NotAutoLayout.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B819E81EE2B753004A950F /* Eltaso.framework in Frameworks */,
+				79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				79B819CB1EE2B5AD004A950F /* SpringTransporterTests */,
 				79B819D61EE2B5AD004A950F /* SpringTransporterUITests */,
 				79B819B51EE2B5AD004A950F /* Products */,
+				79B819E51EE2B753004A950F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +130,15 @@
 				79B819D91EE2B5AD004A950F /* Info.plist */,
 			);
 			path = SpringTransporterUITests;
+			sourceTree = "<group>";
+		};
+		79B819E51EE2B753004A950F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79B819E61EE2B753004A950F /* Eltaso.framework */,
+				79B819E71EE2B753004A950F /* NotAutoLayout.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				FRAMEWORK_SEARCH_PATHS = ../Carthage/Build/iOS;
 				INFOPLIST_FILE = SpringTransporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.SpringTransporter;
@@ -427,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				FRAMEWORK_SEARCH_PATHS = ../Carthage/Build/iOS;
 				INFOPLIST_FILE = SpringTransporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.kirinsan.SpringTransporter;
