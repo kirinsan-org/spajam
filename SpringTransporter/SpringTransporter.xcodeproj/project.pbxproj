@@ -306,6 +306,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF13CC181EE37E7D006C1BBA /* [carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Eltaso.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/NotAutoLayout.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Danbo.framework",
+			);
+			name = "[carthage] Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79B819B01EE2B5AC004A950F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
