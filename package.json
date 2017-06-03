@@ -1,0 +1,14 @@
+{
+  "name": "season",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "deploy": "firebase deploy --only functions",
+    "start": "tsc && node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
