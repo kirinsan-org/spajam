@@ -104,6 +104,9 @@
 		79B819B61EE2B5AD004A950F /* SpringTransporter */ = {
 			isa = PBXGroup;
 			children = (
+				79B819EA1EE2B841004A950F /* Controllers */,
+				79B819EB1EE2B841004A950F /* Models */,
+				79B819EC1EE2B841004A950F /* Views */,
 				79B819B71EE2B5AD004A950F /* AppDelegate.swift */,
 				79B819B91EE2B5AD004A950F /* ViewController.swift */,
 				79B819BB1EE2B5AD004A950F /* Main.storyboard */,
@@ -139,6 +142,30 @@
 				79B819E71EE2B753004A950F /* NotAutoLayout.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79B819EA1EE2B841004A950F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			path = Source/Controllers;
+			sourceTree = "<group>";
+		};
+		79B819EB1EE2B841004A950F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Source/Models;
+			sourceTree = "<group>";
+		};
+		79B819EC1EE2B841004A950F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Source/Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,6 +557,7 @@
 				79B819DE1EE2B5AD004A950F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79B819DF1EE2B5AD004A950F /* Build configuration list for PBXNativeTarget "SpringTransporterTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +566,7 @@
 				79B819E11EE2B5AD004A950F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79B819E21EE2B5AD004A950F /* Build configuration list for PBXNativeTarget "SpringTransporterUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +575,7 @@
 				79B819E41EE2B5AD004A950F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
