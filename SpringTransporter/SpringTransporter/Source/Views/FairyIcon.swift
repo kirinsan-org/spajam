@@ -9,7 +9,7 @@
 import UIKit
 import Danbo
 
-final class FairyIcon: UIView {
+final class FairyIcon: UIButton {
 	
 	let name: String
 	var signalStrength: Double {
@@ -18,6 +18,8 @@ final class FairyIcon: UIView {
 		}
 	}
 	
+	private var onTapped: ((FairyIcon) -> Void)?
+	
 	init(name: String, signalStrength: Double) {
 		
 		self.name = name
@@ -25,10 +27,25 @@ final class FairyIcon: UIView {
 		
 		super.init(frame: .zero)
 		
+		self.initialize()
+		
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	private func initialize() {
+		self.backgroundColor = .red
+		self.addTarget(self, action: #selector(self.onTappedCall), for: .touchUpInside)
+	}
+	
+	func setOnTappedAction(_ action: @escaping (FairyIcon) -> Void) {
+		self.onTapped = action
+	}
+	
+	@objc private func onTappedCall() {
+		self.onTapped?(self)
 	}
 	
 }

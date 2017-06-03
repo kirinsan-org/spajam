@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7951980B1EE347A300C4B337 /* FairyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951980A1EE347A300C4B337 /* FairyInfoViewController.swift */; };
+		7951980D1EE347CC00C4B337 /* FairyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951980C1EE347CC00C4B337 /* FairyInfoView.swift */; };
+		795198101EE34D0600C4B337 /* FlipPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951980F1EE34D0600C4B337 /* FlipPresentationController.swift */; };
+		795198121EE3504600C4B337 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198111EE3504500C4B337 /* AnimationHelper.swift */; };
+		795198141EE35DCD00C4B337 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198131EE35DCD00C4B337 /* UIImage.swift */; };
+		795198161EE366B000C4B337 /* FlipDismissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198151EE366B000C4B337 /* FlipDismissionController.swift */; };
+		795636821EE32FB2008E8A8F /* FairySearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795636811EE32FB2008E8A8F /* FairySearchEngine.swift */; };
 		795969EE1EE2BED100562810 /* Danbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795969ED1EE2BED100562810 /* Danbo.framework */; };
 		79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B71EE2B5AD004A950F /* AppDelegate.swift */; };
 		79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B91EE2B5AD004A950F /* ViewController.swift */; };
@@ -40,6 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7951980A1EE347A300C4B337 /* FairyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyInfoViewController.swift; sourceTree = "<group>"; };
+		7951980C1EE347CC00C4B337 /* FairyInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyInfoView.swift; sourceTree = "<group>"; };
+		7951980F1EE34D0600C4B337 /* FlipPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentationController.swift; sourceTree = "<group>"; };
+		795198111EE3504500C4B337 /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		795198131EE35DCD00C4B337 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		795198151EE366B000C4B337 /* FlipDismissionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipDismissionController.swift; sourceTree = "<group>"; };
+		795636811EE32FB2008E8A8F /* FairySearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchEngine.swift; sourceTree = "<group>"; };
 		795969ED1EE2BED100562810 /* Danbo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Danbo.framework; path = ../Carthage/Build/iOS/Danbo.framework; sourceTree = "<group>"; };
 		79B819B41EE2B5AD004A950F /* SpringTransporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringTransporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B819B71EE2B5AD004A950F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7951980E1EE34CE700C4B337 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				7951980F1EE34D0600C4B337 /* FlipPresentationController.swift */,
+				795198151EE366B000C4B337 /* FlipDismissionController.swift */,
+				795198111EE3504500C4B337 /* AnimationHelper.swift */,
+				795198131EE35DCD00C4B337 /* UIImage.swift */,
+			);
+			name = Transitions;
+			path = Source/Transitions;
+			sourceTree = "<group>";
+		};
 		79B819AB1EE2B5AC004A950F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +139,7 @@
 		79B819B61EE2B5AD004A950F /* SpringTransporter */ = {
 			isa = PBXGroup;
 			children = (
+				7951980E1EE34CE700C4B337 /* Transitions */,
 				79B819EA1EE2B841004A950F /* Controllers */,
 				79B819EB1EE2B841004A950F /* Models */,
 				79B819EC1EE2B841004A950F /* Views */,
@@ -158,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				79B819ED1EE2B997004A950F /* FairySearchViewController.swift */,
+				7951980A1EE347A300C4B337 /* FairyInfoViewController.swift */,
 			);
 			name = Controllers;
 			path = Source/Controllers;
@@ -166,6 +194,7 @@
 		79B819EB1EE2B841004A950F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				795636811EE32FB2008E8A8F /* FairySearchEngine.swift */,
 			);
 			name = Models;
 			path = Source/Models;
@@ -176,6 +205,7 @@
 			children = (
 				79B819EF1EE2BA16004A950F /* FairySearchView.swift */,
 				79B819F11EE2BBB6004A950F /* FairyIcon.swift */,
+				7951980C1EE347CC00C4B337 /* FairyInfoView.swift */,
 			);
 			name = Views;
 			path = Source/Views;
@@ -338,11 +368,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7951980D1EE347CC00C4B337 /* FairyInfoView.swift in Sources */,
+				795198141EE35DCD00C4B337 /* UIImage.swift in Sources */,
 				79B819F21EE2BBB6004A950F /* FairyIcon.swift in Sources */,
+				795198121EE3504600C4B337 /* AnimationHelper.swift in Sources */,
 				79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */,
+				795198161EE366B000C4B337 /* FlipDismissionController.swift in Sources */,
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
 				79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */,
 				79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */,
+				795198101EE34D0600C4B337 /* FlipPresentationController.swift in Sources */,
+				795636821EE32FB2008E8A8F /* FairySearchEngine.swift in Sources */,
+				7951980B1EE347A300C4B337 /* FairyInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

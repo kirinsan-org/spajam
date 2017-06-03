@@ -19,31 +19,57 @@ final class FairySearchView: LayoutView {
 	
 	weak var dataSource: FairySearchViewDataSource?
 	
+	fileprivate var onFairyIconTapped: ((FairyIcon) -> Void)?
+	
 	typealias FairyCache = [String: FairyIcon]
 	fileprivate(set) var loadedFaries: FairyCache = [:]
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		self.backgroundColor = .white
+		self.initialize()
+	}
+	
+	convenience init() {
+		self.init(frame: .zero)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	private func initialize() {
+		self.backgroundColor = .white
+	}
+	
 }
 
 extension FairySearchView {
 	
-	private func makeRandomLayout() -> Layout {
+	func setOnFairyTappedAction(_ action: @escaping (FairyIcon) -> Void) {
+		self.onFairyIconTapped = action
+	}
+	
+}
+
+extension FairySearchView {
+	
+	private func makeRandomPoint() -> CGPoint {
+		
+		let point = CGPoint(x: .createRandom(within: 0.1 ... 0.9),
+		                    y: .createRandom(within: 0.1 ... 0.9))
+		return point
+		
+	}
+	
+	private func makeLayout(at relativePoint: CGPoint) -> Layout {
 		
 		let layout = Layout.makeCustom { (boundSize) -> Frame in
-			let x = boundSize.width * CGFloat.createRandom(within: 0.1 ... 0.9)
-			let y = boundSize.height * CGFloat.createRandom(within: 0.1 ... 0.9)
+			let x = boundSize.width * relativePoint.x
+			let y = boundSize.height * relativePoint.y
 			let frame = Frame(x: x, from: .left,
 			                  y: y, from: .top,
-			                  width: 32,
-			                  height: 32)
+			                  width: 64,
+			                  height: 64)
 			return frame
 		}
 		
@@ -53,10 +79,12 @@ extension FairySearchView {
 	
 	private func addFairy(name: String, signalStrength: Double) {
 		
-		let iconLayout = self.makeRandomLayout()
+		let randomPoint = self.makeRandomPoint()
+		let iconLayout = self.makeLayout(at: randomPoint)
 		let fairyIcon = FairyIcon(name: name, signalStrength: signalStrength)
 		self.loadedFaries[name] = fairyIcon
 		self.addSubview(fairyIcon, constantLayout: iconLayout)
+		fairyIcon.setOnTappedAction { [unowned self] (fairy) in self.onFairyIconTapped?(fairy) }
 		fairyIcon.appear()
 		
 	}
