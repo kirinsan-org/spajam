@@ -55,8 +55,8 @@ extension FairySearchView {
 	
 	private func makeRandomPoint() -> CGPoint {
 		
-		let point = CGPoint(x: .createRandom(within: 0.1 ... 0.9),
-		                    y: .createRandom(within: 0.1 ... 0.9))
+		let point = CGPoint(x: .createRandom(within: 0.2 ... 0.8),
+		                    y: .createRandom(within: 0.2 ... 0.8))
 		return point
 		
 	}

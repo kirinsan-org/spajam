@@ -13,8 +13,8 @@ import Eltaso
 final class FairySearchViewController: UIViewController {
 	
 	weak var tappedIcon: FairyIcon?
-	fileprivate let flipPresentationController = FlipPresentationController()
-	fileprivate let flipDismissionController = FlipDismissionController()
+	fileprivate let flipTransitionController = FlipTransitionController()
+	fileprivate let swipeInteractionController = SwipeInteractionController()
 	
 	private(set) lazy var fairySearchView: FairySearchView = {
 		let view = FairySearchView()
@@ -64,6 +64,7 @@ extension FairySearchViewController {
 	private func presentInfoViewController() {
 		let controller = FairyInfoViewController(dataSource: self.fairySearchEngine)
 		controller.transitioningDelegate = self
+//		self.swipeInteractionController.wire(to: controller) //FIXME: Wierd cancel process
 		self.present(controller, animated: true, completion: nil)
 	}
 	
@@ -88,7 +89,12 @@ extension FairySearchViewController: UIViewControllerTransitioningDelegate {
 	
 	func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 		
-		let controller = self.flipPresentationController
+		defer {
+			self.tappedIcon = nil
+		}
+		
+		let controller = self.flipTransitionController
+		controller.transition = .present
 		controller.originView = self.tappedIcon
 		return controller
 		
@@ -96,14 +102,14 @@ extension FairySearchViewController: UIViewControllerTransitioningDelegate {
 	
 	func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 		
-		defer {
-			self.tappedIcon = nil
-		}
-		
-		let controller = self.flipDismissionController
-		controller.originView = self.tappedIcon
+		let controller = self.flipTransitionController
+		controller.transition = .dismiss
 		return controller
 		
+	}
+	
+	func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+		return self.swipeInteractionController.interactionInProgress ? self.swipeInteractionController : nil
 	}
 	
 }

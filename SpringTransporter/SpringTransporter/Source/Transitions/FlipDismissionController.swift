@@ -50,13 +50,13 @@ extension FlipDismissionController: UIViewControllerAnimatedTransitioning {
 		
 		let duration = transitionDuration(using: transitionContext)
 		
-		UIView.animate(withDuration: duration / 2, animations: { 
+		UIView.animate(withDuration: duration * 0.7, animations: {
 			snapshot.frame = finalFrame
 			snapshot.layer.transform = AnimationHelper.yRotation(.pi / 2)
 		}) { (_) in
 			self.originView?.isHidden = false
 			snapshot.isHidden = true
-			UIView.animate(withDuration: duration / 2, animations: { 
+			UIView.animate(withDuration: duration * 0.3, animations: {
 				self.originView?.layer.transform = AnimationHelper.yRotation(0)
 			}, completion: { (_) in
 				fromVC.view.isHidden = false
