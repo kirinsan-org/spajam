@@ -1,2 +1,5 @@
+github "el-hoshino/Danbo" "e3fe7ec67ff3b5cb72196598d4d4d5c19d580d6e"
 github "el-hoshino/Eltaso" "570a20449e95716128df30034937d5f6be9966e4"
 github "el-hoshino/NotAutoLayout" "18c44164b2fbd781517fbedecfa04ca92245f8fe"
+github "kirinsan-org/ALPS" "6891ceac8bb330fa6f9de2ba5c7bda5020327dff"
+github "onevcat/RandomColorSwift" "1.0.0"
