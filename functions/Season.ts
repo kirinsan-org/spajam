@@ -16,6 +16,7 @@ export interface Season {
   life: number
   lastUpdate: number
   averageTemperature: number
+  emotion: string
 }
 
 export class SeasonFactory {
@@ -26,7 +27,8 @@ export class SeasonFactory {
       pain: 0,
       life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: (await db.ref('defaults/averageTemperature/spring').once('value')).val()
+      averageTemperature: (await db.ref('defaults/averageTemperature/spring').once('value')).val(),
+      emotion: 'shake'
     }
   }
 
@@ -37,7 +39,8 @@ export class SeasonFactory {
       pain: 0,
       life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: (await db.ref('defaults/averageTemperature/summer').once('value')).val()
+      averageTemperature: (await db.ref('defaults/averageTemperature/summer').once('value')).val(),
+      emotion: 'shake'
     }
   }
 
@@ -48,7 +51,8 @@ export class SeasonFactory {
       pain: 0,
       life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: (await db.ref('defaults/averageTemperature/autumn').once('value')).val()
+      averageTemperature: (await db.ref('defaults/averageTemperature/autumn').once('value')).val(),
+      emotion: 'shake'
     }
   }
 
@@ -59,7 +63,8 @@ export class SeasonFactory {
       pain: 0,
       life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: (await db.ref('defaults/averageTemperature/winter').once('value')).val()
+      averageTemperature: (await db.ref('defaults/averageTemperature/winter').once('value')).val(),
+      emotion: 'shake'
     }
   }
 }
