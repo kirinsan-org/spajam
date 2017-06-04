@@ -39,6 +39,7 @@
 		BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */; };
 		BF13CC1E1EE3844E006C1BBA /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1D1EE3844E006C1BBA /* Sensor.swift */; };
 		BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */; };
+		BFD2B64B1EE3A58900BE8083 /* SensorScanner+FairySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorScanner.swift; path = SpringTransporter/SensorScanner.swift; sourceTree = SOURCE_ROOT; };
 		BF13CC1D1EE3844E006C1BBA /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = SpringTransporter/Sensor.swift; sourceTree = SOURCE_ROOT; };
 		BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonCharacter.swift; path = SpringTransporter/SeasonCharacter.swift; sourceTree = SOURCE_ROOT; };
+		BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorScanner+FairySearch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */,
 				BF13CC1D1EE3844E006C1BBA /* Sensor.swift */,
 				BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */,
+				BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */,
 				795636811EE32FB2008E8A8F /* FairySearchEngine.swift */,
 			);
 			name = Models;
@@ -440,6 +443,7 @@
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
 				BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */,
 				79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */,
+				BFD2B64B1EE3A58900BE8083 /* SensorScanner+FairySearch.swift in Sources */,
 				BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */,
 				79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */,
 				795198101EE34D0600C4B337 /* FlipTransitionController.swift in Sources */,
