@@ -427,6 +427,7 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/NotAutoLayout.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/Danbo.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/ALPS.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RandomColor.framework",
 			);
 			outputPaths = (
 			);

@@ -9,6 +9,7 @@
 import UIKit
 import NotAutoLayout
 import Eltaso
+import RandomColor
 
 protocol FairySearchViewDataSource: class {
 	typealias FairyInfo = (name: String, signalStrength: Double)
@@ -90,6 +91,10 @@ extension FairySearchView {
 		let randomPoint = self.makeRandomPoint()
 		let iconLayout = self.makeLayout(at: randomPoint)
 		let fairyIcon = FairyIcon(name: name, signalStrength: signalStrength)
+		let lightBlurColor = randomColor(hue: .orange, luminosity: .light)
+		fairyIcon.backgroundColor = lightBlurColor
+		fairyIcon.layer.cornerRadius = 32
+		fairyIcon.layer.zPosition = 100
 		self.loadedFaries[name] = fairyIcon
 		self.addSubview(fairyIcon, constantLayout: iconLayout)
 		fairyIcon.setOnTappedAction { [unowned self] (fairy) in self.onFairyIconTapped?(fairy) }

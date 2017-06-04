@@ -38,8 +38,8 @@ class FairyInfoView: UIWebView {
 extension FairyInfoView {
 	
 	func test() {
-		let script = "alert(window.setPixieStatus)"
-		print(self.stringByEvaluatingJavaScript(from: script) as Any)
+//		let script = "alert(window.setPixieStatus)"
+//		print(self.stringByEvaluatingJavaScript(from: script) as Any)
 	}
 	
 }
