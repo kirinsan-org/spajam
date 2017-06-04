@@ -47,11 +47,11 @@ exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
     const sensorId = event.params.sensorId;
 
     // センサーから送られてきた値
-    const sensorRef = event.data.ref.root.child(`season/${sensorId}`);
+    const seasonRef = event.data.ref.root.child(`season/${sensorId}`);
     const temperature = event.data.val();
 
     // 現在の季節を取得
-    let season = await sensorRef.once('value');
+    let season = await seasonRef.once('value');
     let val: Season = season.val();
 
     // 未設定なら季節を設定して終了
@@ -59,7 +59,7 @@ exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
       val = newSeason(temperature);
       console.log('create', val);
 
-      return await sensorRef.set(val);
+      return await seasonRef.set(val);
     }
 
     // 直前の編集が5秒以内の場合は何もしない
@@ -99,6 +99,6 @@ exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
     }
 
     // 保存
-    return await sensorRef.set(val);
+    return await seasonRef.set(val);
 
   });
