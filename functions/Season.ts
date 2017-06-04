@@ -1,3 +1,10 @@
+import * as functions from 'firebase-functions'
+
+const admin = require('firebase-admin');
+admin.initializeApp(functions.config().firebase);
+
+const db = admin.database();
+
 export enum State {
   Born, Live, Dead
 }
@@ -12,47 +19,47 @@ export interface Season {
 }
 
 export class SeasonFactory {
-  static spring(): Season {
+  static async spring(): Promise<Season> {
     return {
       type: 'spring',
       state: State.Born,
       pain: 0,
-      life: 1000,
+      life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: 20
+      averageTemperature: (await db.ref('defaults/averageTemperature/spring').once('value')).val()
     }
   }
 
-  static summer(): Season {
+  static async summer(): Promise<Season> {
     return {
       type: 'summer',
       state: State.Born,
       pain: 0,
-      life: 1000,
+      life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: 30
+      averageTemperature: (await db.ref('defaults/averageTemperature/summer').once('value')).val()
     }
   }
 
-  static autumn(): Season {
+  static async autumn(): Promise<Season> {
     return {
       type: 'autumn',
       state: State.Born,
       pain: 0,
-      life: 1000,
+      life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: 20
+      averageTemperature: (await db.ref('defaults/averageTemperature/autumn').once('value')).val()
     }
   }
 
-  static winter(): Season {
+  static async winter(): Promise<Season> {
     return {
       type: 'winter',
       state: State.Born,
       pain: 0,
-      life: 1000,
+      life: (await db.ref('defaults/life').once('value')).val(),
       lastUpdate: 0,
-      averageTemperature: 10
+      averageTemperature: (await db.ref('defaults/averageTemperature/winter').once('value')).val()
     }
   }
 }

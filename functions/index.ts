@@ -5,7 +5,7 @@ import * as functions from 'firebase-functions'
 
 import { State, Season, SeasonFactory } from './Season'
 
-function newSeason(temperature: number): Season {
+async function newSeason(temperature: number): Promise<Season> {
   if (temperature > 25) {
     return SeasonFactory.summer();
   } else if (temperature < 15) {
@@ -56,7 +56,7 @@ exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
 
     // 未設定なら季節を設定して終了
     if (!val) {
-      val = newSeason(temperature);
+      val = await newSeason(temperature);
       console.log('create', val);
 
       return await seasonRef.set(val);
@@ -86,15 +86,15 @@ exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
     } else if (val.state === State.Dead) {
       // 次の季節に切り替える
       if (val.type === 'spring') {
-        val = temperature > 25 ? SeasonFactory.summer() : SeasonFactory.spring()
+        val = await (temperature > 25 ? SeasonFactory.summer() : SeasonFactory.spring())
       } else if (val.type === 'summer') {
-        val = temperature < 25 ? SeasonFactory.autumn() : SeasonFactory.summer()
+        val = await (temperature < 25 ? SeasonFactory.autumn() : SeasonFactory.summer())
       } else if (val.type === 'autumn') {
-        val = temperature < 15 ? SeasonFactory.winter() : SeasonFactory.autumn()
+        val = await (temperature < 15 ? SeasonFactory.winter() : SeasonFactory.autumn())
       } else if (val.type === 'winter') {
-        val = temperature > 15 ? SeasonFactory.spring() : SeasonFactory.winter()
+        val = await (temperature > 15 ? SeasonFactory.spring() : SeasonFactory.winter())
       } else {
-        val = SeasonFactory.spring();
+        val = await SeasonFactory.spring();
       }
     }
 
