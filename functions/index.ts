@@ -51,17 +51,17 @@ function isLiving(season: Season) {
   return season.life > 0;
 }
 
-exports.updateSeason = functions.database.ref('sensor/{sensorId}/temperature')
+exports.updateSeason = functions.database.ref('sensor/{sensorId}/')
   .onWrite(async (event) => {
 
     // センサーのUUID
     const sensorId = event.params.sensorId;
 
     // センサーから送られてきた値
-    const seasonRef = event.data.ref.root.child(`season/${sensorId}`);
-    const temperature = event.data.val();
+    const temperature = event.data.val().temperature;
 
     // 現在の季節を取得
+    const seasonRef = event.data.ref.root.child(`season/${sensorId}`);
     let season = await seasonRef.once('value');
     let val: Season = season.val();
 
