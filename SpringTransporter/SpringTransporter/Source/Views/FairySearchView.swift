@@ -38,7 +38,15 @@ final class FairySearchView: LayoutView {
 	}
 	
 	private func initialize() {
-		self.backgroundColor = .yellow
+		let image = UIImage(named: "pix_gradient.jpg")!
+		let background = UIImageView(image: image)
+		let layout = Layout.makeCustom { (boundSize) -> Frame in
+			return Frame(x: 0, from: .center,
+			             y: 0, from: .middle,
+			             width: boundSize.width,
+			             height: boundSize.height)
+		}
+		self.addSubview(background, constantLayout: layout)
 	}
 	
 }
