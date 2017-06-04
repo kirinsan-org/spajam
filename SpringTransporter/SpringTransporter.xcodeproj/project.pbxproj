@@ -27,6 +27,9 @@
 		BF13CC0A1EE376E6006C1BBA /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC091EE376E6006C1BBA /* FirebaseDatabase.framework */; };
 		BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */; };
 		BF13CC1A1EE38261006C1BBA /* ALPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC191EE38261006C1BBA /* ALPS.framework */; };
+		BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */; };
+		BF13CC1E1EE3844E006C1BBA /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1D1EE3844E006C1BBA /* Sensor.swift */; };
+		BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		BF13CC141EE37C2E006C1BBA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		BF13CC151EE37D89006C1BBA /* SpringTransporter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpringTransporter-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF13CC191EE38261006C1BBA /* ALPS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ALPS.framework; path = ../Carthage/Build/iOS/ALPS.framework; sourceTree = "<group>"; };
+		BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorScanner.swift; path = SpringTransporter/SensorScanner.swift; sourceTree = SOURCE_ROOT; };
+		BF13CC1D1EE3844E006C1BBA /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = SpringTransporter/Sensor.swift; sourceTree = SOURCE_ROOT; };
+		BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonCharacter.swift; path = SpringTransporter/SeasonCharacter.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,9 @@
 		79B819EB1EE2B841004A950F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */,
+				BF13CC1D1EE3844E006C1BBA /* Sensor.swift */,
+				BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */,
 			);
 			name = Models;
 			path = Source/Models;
@@ -386,8 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */,
+				BF13CC1E1EE3844E006C1BBA /* Sensor.swift in Sources */,
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
+				BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */,
 				79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */,
+				BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */,
 				79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
