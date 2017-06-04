@@ -30,16 +30,37 @@ class FairyInfoViewController: UIViewController {
 		let view = self.fairyInfoView
 		view.frame = UIScreen.main.bounds
 		view.autoresizingMask = .flexibleSize
+        view.dataSource = fairyInfoViewDataSource
 		self.view = view
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.fairyInfoView.dataSource = self.fairyInfoViewDataSource
+		self.setupWebview()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.fairyInfoView.reload()
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.dismiss(animated: true, completion: nil)
 	}
 	
+	private func setupWebview() {
+		
+		self.fairyInfoView.backgroundColor = .black
+		
+		let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "webcontent")!
+		let url = URL(string: path)!
+		let request = URLRequest(url: url)
+		self.fairyInfoView.webView.loadRequest(request)
+	}
+}
+
+extension FairyInfoViewController: SensorDelegate {
+    func sensor(_ sensor: Sensor, didUpdate character: SeasonCharacter) {
+        self.fairyInfoView.reload()
+    }
 }

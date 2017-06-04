@@ -89,6 +89,7 @@ extension FlipTransitionController {
 		UIView.animateKeyframes(withDuration: duration, delay: 0, options: .calculationModeCubic, animations: {
 			
 			UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3, animations: {
+				self.originView?.transform = .identity
 				self.originView?.frame = initialFrame
 				self.originView?.layer.transform = AnimationHelper.yRotation(-.pi / 2)
 			})
@@ -126,6 +127,7 @@ extension FlipTransitionController {
 		
 		AnimationHelper.perspectiveTransformForContainerView(containerView)
 		
+		self.originView?.transform = .identity
 		self.originView?.frame = initialFrame
 		self.originView?.layer.transform = AnimationHelper.yRotation(-.pi / 2)
 		

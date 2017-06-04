@@ -13,8 +13,9 @@
 		795198121EE3504600C4B337 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198111EE3504500C4B337 /* AnimationHelper.swift */; };
 		795198141EE35DCD00C4B337 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198131EE35DCD00C4B337 /* UIImage.swift */; };
 		795198181EE36EC900C4B337 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198171EE36EC900C4B337 /* SwipeInteractionController.swift */; };
-		795636821EE32FB2008E8A8F /* FairySearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795636811EE32FB2008E8A8F /* FairySearchEngine.swift */; };
 		795969EE1EE2BED100562810 /* Danbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795969ED1EE2BED100562810 /* Danbo.framework */; };
+		7959EA301EE399410094C025 /* webcontent in Resources */ = {isa = PBXBuildFile; fileRef = 7959EA2F1EE399410094C025 /* webcontent */; };
+		79764CB61EE3BC1F000EB09A /* pix_gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79764CB51EE3BC1F000EB09A /* pix_gradient.jpg */; };
 		79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B71EE2B5AD004A950F /* AppDelegate.swift */; };
 		79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B91EE2B5AD004A950F /* ViewController.swift */; };
 		79B819BD1EE2B5AD004A950F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B819BB1EE2B5AD004A950F /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */; };
 		BF13CC1E1EE3844E006C1BBA /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC1D1EE3844E006C1BBA /* Sensor.swift */; };
 		BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */; };
+		BF98D7881EE3C1DD00FDD089 /* Sensor+FairyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D7871EE3C1DD00FDD089 /* Sensor+FairyInfo.swift */; };
 		BFD2B64B1EE3A58900BE8083 /* SensorScanner+FairySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +68,9 @@
 		795198111EE3504500C4B337 /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		795198131EE35DCD00C4B337 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		795198171EE36EC900C4B337 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
-		795636811EE32FB2008E8A8F /* FairySearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchEngine.swift; sourceTree = "<group>"; };
 		795969ED1EE2BED100562810 /* Danbo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Danbo.framework; path = ../Carthage/Build/iOS/Danbo.framework; sourceTree = "<group>"; };
+		7959EA2F1EE399410094C025 /* webcontent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = webcontent; path = Resource/webcontent; sourceTree = "<group>"; };
+		79764CB51EE3BC1F000EB09A /* pix_gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pix_gradient.jpg; path = Resource/pix_gradient.jpg; sourceTree = "<group>"; };
 		79B819B41EE2B5AD004A950F /* SpringTransporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringTransporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B819B71EE2B5AD004A950F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B819B91EE2B5AD004A950F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorScanner.swift; path = SpringTransporter/SensorScanner.swift; sourceTree = SOURCE_ROOT; };
 		BF13CC1D1EE3844E006C1BBA /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = SpringTransporter/Sensor.swift; sourceTree = SOURCE_ROOT; };
 		BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonCharacter.swift; path = SpringTransporter/SeasonCharacter.swift; sourceTree = SOURCE_ROOT; };
+		BF98D7871EE3C1DD00FDD089 /* Sensor+FairyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sensor+FairyInfo.swift"; sourceTree = "<group>"; };
 		BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorScanner+FairySearch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +184,8 @@
 				79B819EA1EE2B841004A950F /* Controllers */,
 				79B819EB1EE2B841004A950F /* Models */,
 				79B819EC1EE2B841004A950F /* Views */,
+				79764CB51EE3BC1F000EB09A /* pix_gradient.jpg */,
+				7959EA2F1EE399410094C025 /* webcontent */,
 				79B819B71EE2B5AD004A950F /* AppDelegate.swift */,
 				79B819B91EE2B5AD004A950F /* ViewController.swift */,
 				79B819BB1EE2B5AD004A950F /* Main.storyboard */,
@@ -237,9 +243,9 @@
 			children = (
 				BF13CC201EE39DEB006C1BBA /* SeasonCharacter.swift */,
 				BF13CC1D1EE3844E006C1BBA /* Sensor.swift */,
+				BF98D7871EE3C1DD00FDD089 /* Sensor+FairyInfo.swift */,
 				BF13CC1B1EE38390006C1BBA /* SensorScanner.swift */,
 				BFD2B64A1EE3A58900BE8083 /* SensorScanner+FairySearch.swift */,
-				795636811EE32FB2008E8A8F /* FairySearchEngine.swift */,
 			);
 			name = Models;
 			path = Source/Models;
@@ -342,7 +348,7 @@
 				TargetAttributes = {
 					79B819B31EE2B5AC004A950F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2ZY4DX9AXC;
+						DevelopmentTeam = KC8N9BMQJY;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -388,6 +394,8 @@
 				79B819C21EE2B5AD004A950F /* LaunchScreen.storyboard in Resources */,
 				BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */,
 				79B819BF1EE2B5AD004A950F /* Assets.xcassets in Resources */,
+				79764CB61EE3BC1F000EB09A /* pix_gradient.jpg in Resources */,
+				7959EA301EE399410094C025 /* webcontent in Resources */,
 				79B819BD1EE2B5AD004A950F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +427,7 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/NotAutoLayout.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/Danbo.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/ALPS.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RandomColor.framework",
 			);
 			outputPaths = (
 			);
@@ -439,6 +448,7 @@
 				79B819F21EE2BBB6004A950F /* FairyIcon.swift in Sources */,
 				795198121EE3504600C4B337 /* AnimationHelper.swift in Sources */,
 				79B819F01EE2BA16004A950F /* FairySearchView.swift in Sources */,
+				BF98D7881EE3C1DD00FDD089 /* Sensor+FairyInfo.swift in Sources */,
 				BF13CC1E1EE3844E006C1BBA /* Sensor.swift in Sources */,
 				79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */,
 				BF13CC1C1EE38390006C1BBA /* SensorScanner.swift in Sources */,
@@ -447,7 +457,6 @@
 				BF13CC211EE39DEB006C1BBA /* SeasonCharacter.swift in Sources */,
 				79B819EE1EE2B997004A950F /* FairySearchViewController.swift in Sources */,
 				795198101EE34D0600C4B337 /* FlipTransitionController.swift in Sources */,
-				795636821EE32FB2008E8A8F /* FairySearchEngine.swift in Sources */,
 				7951980B1EE347A300C4B337 /* FairyInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				DEVELOPMENT_TEAM = 2ZY4DX9AXC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Firebase",
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",
@@ -619,7 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = KC8N9BMQJY;
+				DEVELOPMENT_TEAM = 2ZY4DX9AXC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Firebase",
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",

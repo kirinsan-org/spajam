@@ -7,31 +7,85 @@
 //
 
 import UIKit
+import WebKit
 import NotAutoLayout
 
 protocol FairyInfoViewDataSource: class {
-	
+    func pixleName(for fairyInfoView: FairyInfoView) -> String?
+	func pixieStatus(for fairyInfoView: FairyInfoView) -> (season: FairyInfoView.Season, phase: Int)
+	func pixieEmotion(for fairyInfoView: FairyInfoView) -> FairyInfoView.Emotion?
 }
 
-class FairyInfoView: LayoutView {
+class FairyInfoView: UIView {
+	
+	enum Season: String {
+		case spring
+		case summer
+		case autumn
+		case winter
+		case none
+	}
+	
+	enum Emotion: String {
+		case shake
+		case hurt
+		case happy
+	}
+
+    var webView = UIWebView()
 	
 	weak var dataSource: FairyInfoViewDataSource?
-	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		self.initialize()
+
+    func reload() {
+        guard let dataSource = self.dataSource else {
+            return
+        }
+
+        let name = dataSource.pixleName(for: self)
+        let status = dataSource.pixieStatus(for: self)
+        let emotion = dataSource.pixieEmotion(for: self)
+
+        setPixieStatus(season: status.season.rawValue, phase: status.phase)
+        setPixieEmotion(emotion)
+        setPixie(name: name, old: nil)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        addSubview(webView)
+        webView.delegate = self
+        webView.frame = bounds
+    }
+}
+
+extension FairyInfoView: UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        DispatchQueue.main.async { [weak self] in
+            self?.reload()
+        }
+    }
+}
+
+extension FairyInfoView {
+	func setPixieStatus(season: String, phase: Int) {
+		guard let status = self.dataSource?.pixieStatus(for: self) else {
+			return
+		}
+		let script = "setPixieStatus(\"\(status.season.rawValue)\" , \(status.phase))"
+		webView.stringByEvaluatingJavaScript(from: script)
 	}
 	
-	convenience init() {
-		self.init(frame: .zero)
+	func setPixieEmotion(_ emotion: Emotion?) {
+		guard let emotion = self.dataSource?.pixieEmotion(for: self) else {
+			return
+		}
+		let script = "setPixieEmotion(\"\(emotion.rawValue)\")"
+		webView.stringByEvaluatingJavaScript(from: script)
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+	func setPixie(name: String?, old: Int?) {
+		let script = "setPixieName(\"\(name ?? "")\" , \(String(describing: old)))"
+		webView.stringByEvaluatingJavaScript(from: script)
 	}
-	
-	private func initialize() {
-		self.backgroundColor = .blue
-	}
-	
 }
