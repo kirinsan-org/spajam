@@ -34,6 +34,17 @@ function updateLife(season: Season, temperature: number) {
   }
 
   season.lastUpdate = now
+
+  // 急激な温度変化があった場合は痛がる
+  if (diff > 1) {
+    season.emotion = 'hurt';
+  } else {
+    if (Math.random() < 0.5) {
+      season.emotion = 'shake';
+    } else {
+      season.emotion = 'happy';
+    }
+  }
 }
 
 function isLiving(season: Season) {
