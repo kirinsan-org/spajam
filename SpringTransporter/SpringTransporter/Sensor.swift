@@ -23,6 +23,14 @@ final class Sensor {
         return peripheral.uuid
     }
 
+    var name: String? {
+        return peripheral.name
+    }
+
+    var rssi: Int {
+        return peripheral.rssi
+    }
+
     weak var delegate: SensorDelegate?
 
     init(peripheral: ALPS.Peripheral) {
