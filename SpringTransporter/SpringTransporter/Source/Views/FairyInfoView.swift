@@ -72,7 +72,7 @@ extension FairyInfoView {
 		guard let status = self.dataSource?.pixieStatus(for: self) else {
 			return
 		}
-		let script = "setPixieStatus( season?:\(status.season.rawValue) , phase:\(status.phase) )"
+		let script = "setPixieStatus(\"\(status.season.rawValue)\" , \(status.phase))"
 		webView.stringByEvaluatingJavaScript(from: script)
 	}
 	
@@ -80,7 +80,7 @@ extension FairyInfoView {
 		guard let emotion = self.dataSource?.pixieEmotion(for: self) else {
 			return
 		}
-		let script = "setPixieEmotion( \(emotion.rawValue) )"
+		let script = "setPixieEmotion(\"\(emotion.rawValue)\")"
 		webView.stringByEvaluatingJavaScript(from: script)
 	}
 	

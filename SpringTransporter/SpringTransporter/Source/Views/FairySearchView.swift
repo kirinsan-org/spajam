@@ -9,6 +9,8 @@
 import UIKit
 import NotAutoLayout
 import Eltaso
+import Danbo
+import RandomColor
 
 protocol FairySearchViewDataSource: class {
 	typealias FairyInfo = (name: String, signalStrength: Double)
@@ -38,7 +40,15 @@ final class FairySearchView: LayoutView {
 	}
 	
 	private func initialize() {
-		self.backgroundColor = .yellow
+		let image = UIImage(named: "pix_gradient.jpg")!
+		let background = UIImageView(image: image)
+		let layout = Layout.makeCustom { (boundSize) -> Frame in
+			return Frame(x: 0, from: .center,
+			             y: 0, from: .middle,
+			             width: boundSize.width,
+			             height: boundSize.height)
+		}
+		self.addSubview(background, constantLayout: layout)
 	}
 	
 }
@@ -82,10 +92,18 @@ extension FairySearchView {
 		let randomPoint = self.makeRandomPoint()
 		let iconLayout = self.makeLayout(at: randomPoint)
 		let fairyIcon = FairyIcon(name: name, signalStrength: signalStrength)
+		let lightBlurColor = randomColor(hue: .red, luminosity: .light)
+		fairyIcon.backgroundColor = lightBlurColor
+		fairyIcon.layer.cornerRadius = 32
+		fairyIcon.layer.zPosition = 100
 		self.loadedFaries[name] = fairyIcon
 		self.addSubview(fairyIcon, constantLayout: iconLayout)
 		fairyIcon.setOnTappedAction { [unowned self] (fairy) in self.onFairyIconTapped?(fairy) }
 		fairyIcon.appear()
+		
+		UIView.animate(withDuration: 1, delay: 0, options: .autoreverse, animations: {
+			fairyIcon.transform = .init(scaleX: 1.5, y: 1.5)
+		}, completion: nil)
 		
 	}
 	
