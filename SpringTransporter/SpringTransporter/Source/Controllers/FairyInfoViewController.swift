@@ -35,11 +35,43 @@ class FairyInfoViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.fairyInfoView.dataSource = self.fairyInfoViewDataSource
+		self.setupWebview()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		self.fairyInfoView.test()
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.dismiss(animated: true, completion: nil)
+	}
+	
+	private func setupWebview() {
+		
+		self.fairyInfoView.backgroundColor = .black
+		
+		let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "webcontent")!
+		let url = URL(string: path)!
+		let request = URLRequest(url: url)
+		self.fairyInfoView.loadRequest(request)
+	}
+	
+}
+
+extension FairyInfoViewController: UIWebViewDelegate {
+	
+	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+		print(request.url?.scheme)
+		return false
+	}
+	
+	func webViewDidFinishLoad(_ webView: UIWebView) {
+		DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+			DispatchQueue.main.async {
+				self.fairyInfoView.test()
+			}
+		}
 	}
 	
 }

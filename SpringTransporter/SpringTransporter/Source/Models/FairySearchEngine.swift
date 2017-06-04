@@ -33,4 +33,12 @@ extension DummyFairySearchEngine: FairySearchViewDataSource {
 
 extension DummyFairySearchEngine: FairyInfoViewDataSource {
 	
+	func pixieStatus(for fairyInfoView: FairyInfoView) -> (season: FairyInfoView.Season, phase: Int) {
+		return (.spring, 1)
+	}
+
+	func pixieEmotion(for fairyInfoView: FairyInfoView) -> FairyInfoView.Emotion {
+		return .hurt
+	}
+	
 }

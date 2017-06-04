@@ -15,6 +15,7 @@
 		795198181EE36EC900C4B337 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795198171EE36EC900C4B337 /* SwipeInteractionController.swift */; };
 		795636821EE32FB2008E8A8F /* FairySearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795636811EE32FB2008E8A8F /* FairySearchEngine.swift */; };
 		795969EE1EE2BED100562810 /* Danbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795969ED1EE2BED100562810 /* Danbo.framework */; };
+		7959EA301EE399410094C025 /* webcontent in Resources */ = {isa = PBXBuildFile; fileRef = 7959EA2F1EE399410094C025 /* webcontent */; };
 		79B819B81EE2B5AD004A950F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B71EE2B5AD004A950F /* AppDelegate.swift */; };
 		79B819BA1EE2B5AD004A950F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B819B91EE2B5AD004A950F /* ViewController.swift */; };
 		79B819BD1EE2B5AD004A950F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B819BB1EE2B5AD004A950F /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		795198171EE36EC900C4B337 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		795636811EE32FB2008E8A8F /* FairySearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairySearchEngine.swift; sourceTree = "<group>"; };
 		795969ED1EE2BED100562810 /* Danbo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Danbo.framework; path = ../Carthage/Build/iOS/Danbo.framework; sourceTree = "<group>"; };
+		7959EA2F1EE399410094C025 /* webcontent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = webcontent; path = Resource/webcontent; sourceTree = "<group>"; };
 		79B819B41EE2B5AD004A950F /* SpringTransporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringTransporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B819B71EE2B5AD004A950F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B819B91EE2B5AD004A950F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				79B819EA1EE2B841004A950F /* Controllers */,
 				79B819EB1EE2B841004A950F /* Models */,
 				79B819EC1EE2B841004A950F /* Views */,
+				7959EA2F1EE399410094C025 /* webcontent */,
 				79B819B71EE2B5AD004A950F /* AppDelegate.swift */,
 				79B819B91EE2B5AD004A950F /* ViewController.swift */,
 				79B819BB1EE2B5AD004A950F /* Main.storyboard */,
@@ -388,6 +391,7 @@
 				79B819C21EE2B5AD004A950F /* LaunchScreen.storyboard in Resources */,
 				BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */,
 				79B819BF1EE2B5AD004A950F /* Assets.xcassets in Resources */,
+				7959EA301EE399410094C025 /* webcontent in Resources */,
 				79B819BD1EE2B5AD004A950F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

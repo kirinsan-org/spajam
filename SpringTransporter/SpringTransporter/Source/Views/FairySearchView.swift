@@ -38,7 +38,7 @@ final class FairySearchView: LayoutView {
 	}
 	
 	private func initialize() {
-		self.backgroundColor = .white
+		self.backgroundColor = .yellow
 	}
 	
 }
