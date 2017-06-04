@@ -31,6 +31,8 @@ final class Sensor {
         return peripheral.rssi
     }
 
+    var seasonCharacter: SeasonCharacter?
+
     weak var delegate: SensorDelegate?
 
     init(peripheral: ALPS.Peripheral) {
@@ -48,6 +50,7 @@ final class Sensor {
                 let rawType = snapshot.childSnapshot(forPath: "type").value as? String,
                 let rawState = snapshot.childSnapshot(forPath: "state").value as? Int,
                 let pain = snapshot.childSnapshot(forPath: "pain").value as? Int,
+                let emotion = snapshot.childSnapshot(forPath: "emotion").value as? String,
                 let type = SeasonType(rawValue: rawType),
                 let state = SeasonCharacterState(rawValue: rawState),
                 let strongSelf = self
@@ -58,9 +61,11 @@ final class Sensor {
             let character = SeasonCharacter(
                 type: type,
                 state: state,
-                pain: pain
+                pain: pain,
+                emotion: emotion
             )
 
+            strongSelf.seasonCharacter = character
             strongSelf.delegate?.sensor(strongSelf, didUpdate: character)
         })
 

@@ -21,11 +21,6 @@ final class FairySearchViewController: UIViewController {
 		return view
 	}()
 	
-	let fairySearchEngine: DummyFairySearchEngine = {
-		let engine = DummyFairySearchEngine()
-		return engine
-	}()
-	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		self.initialize()
@@ -52,7 +47,8 @@ final class FairySearchViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.fairySearchView.dataSource = self.fairySearchEngine
+        SensorScanner.shared.delegate = self
+		self.fairySearchView.dataSource = SensorScanner.shared
 		self.setupFairyIconOnTappedAction()
 		self.update()
 	}
@@ -62,7 +58,11 @@ final class FairySearchViewController: UIViewController {
 extension FairySearchViewController {
 	
 	private func presentInfoViewController() {
-		let controller = FairyInfoViewController(dataSource: self.fairySearchEngine)
+        guard let sensor = SensorScanner.shared.sensors.first else {
+            return
+        }
+		let controller = FairyInfoViewController(dataSource: sensor)
+        sensor.delegate = controller
 		controller.transitioningDelegate = self
 //		self.swipeInteractionController.wire(to: controller) //FIXME: Wierd cancel process
 		self.present(controller, animated: true, completion: nil)
@@ -83,6 +83,16 @@ extension FairySearchViewController {
 		self.fairySearchView.updateFairies()
 	}
 	
+}
+
+extension FairySearchViewController: SensorScannerDelegate {
+    func sensorScanner(_ sensorScanner: SensorScanner, didFind sensor: Sensor) {
+        update()
+    }
+
+    func sensorScanner(_ sensorScanner: SensorScanner, didLost sensor: Sensor) {
+        return
+    }
 }
 
 extension FairySearchViewController: UIViewControllerTransitioningDelegate {

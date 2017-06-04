@@ -25,4 +25,5 @@ struct SeasonCharacter {
     var type: SeasonType
     var state: SeasonCharacterState
     var pain: Int
+    var emotion: String
 }

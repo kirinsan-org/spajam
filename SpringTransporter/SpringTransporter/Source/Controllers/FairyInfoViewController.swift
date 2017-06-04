@@ -30,6 +30,7 @@ class FairyInfoViewController: UIViewController {
 		let view = self.fairyInfoView
 		view.frame = UIScreen.main.bounds
 		view.autoresizingMask = .flexibleSize
+        view.dataSource = fairyInfoViewDataSource
 		self.view = view
 	}
 	
@@ -40,7 +41,7 @@ class FairyInfoViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		self.fairyInfoView.test()
+		self.fairyInfoView.reload()
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -54,24 +55,12 @@ class FairyInfoViewController: UIViewController {
 		let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "webcontent")!
 		let url = URL(string: path)!
 		let request = URLRequest(url: url)
-		self.fairyInfoView.loadRequest(request)
+		self.fairyInfoView.webView.loadRequest(request)
 	}
-	
 }
 
-extension FairyInfoViewController: UIWebViewDelegate {
-	
-	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-		print(request.url?.scheme)
-		return false
-	}
-	
-	func webViewDidFinishLoad(_ webView: UIWebView) {
-		DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
-			DispatchQueue.main.async {
-				self.fairyInfoView.test()
-			}
-		}
-	}
-	
+extension FairyInfoViewController: SensorDelegate {
+    func sensor(_ sensor: Sensor, didUpdate character: SeasonCharacter) {
+        self.fairyInfoView.reload()
+    }
 }
