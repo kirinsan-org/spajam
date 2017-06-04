@@ -26,6 +26,7 @@
 		BF13CC081EE3761A006C1BBA /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC021EE3761A006C1BBA /* GoogleToolboxForMac.framework */; };
 		BF13CC0A1EE376E6006C1BBA /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC091EE376E6006C1BBA /* FirebaseDatabase.framework */; };
 		BF13CC0F1EE37A08006C1BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */; };
+		BF13CC1A1EE38261006C1BBA /* ALPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13CC191EE38261006C1BBA /* ALPS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BF13CC0E1EE37A08006C1BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF13CC141EE37C2E006C1BBA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		BF13CC151EE37D89006C1BBA /* SpringTransporter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpringTransporter-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF13CC191EE38261006C1BBA /* ALPS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ALPS.framework; path = ../Carthage/Build/iOS/ALPS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				BF13CC081EE3761A006C1BBA /* GoogleToolboxForMac.framework in Frameworks */,
 				79B819E91EE2B753004A950F /* NotAutoLayout.framework in Frameworks */,
 				BF13CC031EE3761A006C1BBA /* FirebaseAnalytics.framework in Frameworks */,
+				BF13CC1A1EE38261006C1BBA /* ALPS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 		79B819E51EE2B753004A950F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF13CC191EE38261006C1BBA /* ALPS.framework */,
 				BF13CC0D1EE378A7006C1BBA /* Firebase */,
 				79B819E61EE2B753004A950F /* Eltaso.framework */,
 				79B819E71EE2B753004A950F /* NotAutoLayout.framework */,
@@ -289,7 +293,7 @@
 				TargetAttributes = {
 					79B819B31EE2B5AC004A950F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = KC8N9BMQJY;
+						DevelopmentTeam = 2ZY4DX9AXC;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -365,6 +369,7 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/Eltaso.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/NotAutoLayout.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/Danbo.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/ALPS.framework",
 			);
 			name = "[carthage] Copy Frameworks";
 			outputPaths = (
